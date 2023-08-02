@@ -3,6 +3,8 @@
 - O que é o Node.js?
 - Para que serve o NPM?
 - Para que ser o Nodemon
+- O que é uma API?
+- Para que serve o Framework Express?
 
 # Comandos Uteis
 
@@ -16,3 +18,4 @@
 - git config --list
 
 - git init
+- git remote add origin [url do repositório]
