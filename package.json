@@ -1,0 +1,22 @@
+{
+  "name": "api-node-express-ads2sem2023",
+  "version": "1.0.0",
+  "description": "API node com Express",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "keywords": [
+    "api",
+    "javascript",
+    "node",
+    "express",
+    "restfull"
+  ],
+  "author": "Renan Cavichi",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
