@@ -28,9 +28,19 @@
             "method": "POST",
             "sortNum": 20000,
             "created": "2023-08-09T00:21:16.548Z",
-            "modified": "2023-08-09T00:21:16.548Z",
-            "headers": [],
+            "modified": "2023-08-09T01:05:19.301Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
             "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nome\": \"Renan Cavichi\",\n  \"idade\": 39,\n  \"email\": \"renancavichi@gmail.com\"\n}",
+                "form": []
+            },
             "tests": []
         },
         {
@@ -42,9 +52,14 @@
             "method": "PUT",
             "sortNum": 30000,
             "created": "2023-08-09T00:22:17.444Z",
-            "modified": "2023-08-09T00:22:17.444Z",
+            "modified": "2023-08-09T01:16:26.692Z",
             "headers": [],
             "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nome\": \"Renan Cavichi\",\n  \"idade\": 39,\n  \"email\": \"renancavichi@gmail.com\"\n}",
+                "form": []
+            },
             "tests": []
         },
         {

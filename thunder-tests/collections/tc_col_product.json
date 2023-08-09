@@ -12,7 +12,7 @@
             "name": "/product",
             "url": "http://192.168.159.1:3000/product",
             "method": "DELETE",
-            "sortNum": 10000,
+            "sortNum": 50000,
             "created": "2023-08-09T00:23:15.304Z",
             "modified": "2023-08-09T00:23:15.304Z",
             "headers": [],
@@ -26,7 +26,7 @@
             "name": "/product",
             "url": "http://192.168.159.1:3000/product",
             "method": "GET",
-            "sortNum": 20000,
+            "sortNum": 7500,
             "created": "2023-08-09T00:23:52.459Z",
             "modified": "2023-08-09T00:23:52.459Z",
             "headers": [],
@@ -40,11 +40,16 @@
             "name": "/product",
             "url": "http://192.168.159.1:3000/product",
             "method": "POST",
-            "sortNum": 30000,
+            "sortNum": 15000,
             "created": "2023-08-09T00:24:07.212Z",
-            "modified": "2023-08-09T00:24:07.212Z",
+            "modified": "2023-08-09T01:18:21.529Z",
             "headers": [],
             "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nome\": \"PC Nasa\",\n  \"valor\": \"R$ 20.000,00\",\n  \"peso\": \"3 kg\"\n}",
+                "form": []
+            },
             "tests": []
         },
         {
@@ -56,9 +61,14 @@
             "method": "PUT",
             "sortNum": 40000,
             "created": "2023-08-09T00:24:19.644Z",
-            "modified": "2023-08-09T00:24:19.644Z",
+            "modified": "2023-08-09T01:18:48.428Z",
             "headers": [],
             "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nome\": \"PC Nasa\",\n  \"valor\": \"R$ 25.000,00\",\n  \"peso\": \"3 kg\"\n}",
+                "form": []
+            },
             "tests": []
         }
     ]

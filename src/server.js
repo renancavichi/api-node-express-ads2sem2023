@@ -1,11 +1,18 @@
 // const express = require('express')
 import express from 'express'
+import bodyParser from 'body-parser'
+
+import {PORT} from './config.js'
+import logger from './middlewares/logger.js'
+
 import userRoute from './router/userRoute.js'
 import productRoute from './router/productRoute.js'
 
-import {PORT} from './config.js'
-
 const api = express()
+
+// Middlewares
+api.use(logger)
+api.use(bodyParser.json())
 
 api.get('/', (req, res)=>{   
     res.json({message: "Bem-vindo a API"})
