@@ -1,15 +1,11 @@
 import express from 'express'
+import listUsers from '../controllers/user/listUsers.js'
+import getUser from '../controllers/user/getUser.js'
 
 const router = express.Router()
 
-router.get('/', (req, res)=>{   
-    const users = [
-        {id: 1, name: "João"},
-        {id: 2, name: "Maria"},
-        {id: 3, name: "José"},
-    ]
-    res.json(users)
-})
+router.get('/', getUser)
+router.get('/list', listUsers)
 
 router.post('/', (req, res)=>{
     //Create
