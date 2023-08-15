@@ -6,6 +6,7 @@
 - O que é uma API?
 - O que é uma API RESTfull? 
 - Para que serve o Framework Express?
+- O que é o Padrão de Projeto Middleware?
 
 # Comandos Uteis
 

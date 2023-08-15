@@ -2,8 +2,11 @@
   "name": "api-node-express-ads2sem2023",
   "version": "1.0.0",
   "description": "API node com Express",
-  "main": "server.js",
+  "main": "src/server.js",
   "type": "module",
+  "engines": {
+    "node": "16.14.2"
+  },
   "scripts": {
     "start": "node src/server.js",
     "dev": "nodemon src/server.js"
