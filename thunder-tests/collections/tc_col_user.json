@@ -75,6 +75,20 @@
             "headers": [],
             "params": [],
             "tests": []
+        },
+        {
+            "_id": "626c2504-03d0-4805-8791-ee8bdee442e5",
+            "colId": "205af8cd-e190-4648-a137-a14c73fc2056",
+            "containerId": "",
+            "name": "/user/list",
+            "url": "{{host}}/user/list",
+            "method": "GET",
+            "sortNum": 15000,
+            "created": "2023-08-16T00:28:07.548Z",
+            "modified": "2023-08-16T00:28:07.548Z",
+            "headers": [],
+            "params": [],
+            "tests": []
         }
     ]
 }

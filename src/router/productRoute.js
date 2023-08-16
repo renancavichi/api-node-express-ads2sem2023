@@ -3,11 +3,8 @@ import express from 'express'
 const router = express.Router()
 
 router.get('/', (req, res)=>{   
-    const users = [
-        {id: 1, name: "PC da Nasa"},
-        {id: 2, name: "Mouse"},
-        {id: 3, name: "Teclado"},
-    ]
+    const users = 
+        {id: 1, name: "PC da Nasa"}
     res.json(users)
 })
 
