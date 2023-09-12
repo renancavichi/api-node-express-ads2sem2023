@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 23-Ago-2023 às 00:14
+-- Tempo de geração: 13-Set-2023 às 01:44
 -- Versão do servidor: 10.4.22-MariaDB
 -- versão do PHP: 8.0.13
 
@@ -31,19 +31,19 @@ CREATE TABLE `users` (
   `id` int(11) NOT NULL,
   `name` varchar(200) NOT NULL,
   `email` varchar(500) NOT NULL,
-  `pass` varchar(256) NOT NULL
+  `pass` varchar(256) NOT NULL,
+  `photo` varchar(600) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Extraindo dados da tabela `users`
 --
 
-INSERT INTO `users` (`id`, `name`, `email`, `pass`) VALUES
-(1, 'Renan Cavichi', 'renancavichi@gmail.com', '123123213'),
-(2, 'José', 'jose@gmail.com', '123122321'),
-(3, 'Maria', 'maria@gmail.com', '1231231'),
-(4, 'Maria 2', 'maria2@gmail.com', '1231231'),
-(5, 'Maria 3', 'maria3@gmail.com', '1231231');
+INSERT INTO `users` (`id`, `name`, `email`, `pass`, `photo`) VALUES
+(1, 'Renan C.', 'renanc@gmail.com', '312321', 'https://avatars.githubusercontent.com/u/4259630?v=4'),
+(2, 'José', 'jose@gmail.com', '123122321', 'https://avatars.githubusercontent.com/u/118139242?v=4'),
+(3, 'Maria', 'maria@gmail.com', '1231231', 'https://avatars.githubusercontent.com/u/14179725?v=4'),
+(6, 'José Silva', 'jose@mail.com', '123123', 'https://avatars.githubusercontent.com/u/110481359?v=4');
 
 --
 -- Índices para tabelas despejadas
@@ -63,7 +63,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT de tabela `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
