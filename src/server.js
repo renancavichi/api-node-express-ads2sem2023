@@ -1,6 +1,7 @@
 // const express = require('express')
 import express from 'express'
 import bodyParser from 'body-parser'
+import cors from 'cors'
 
 import {PORT} from './config.js'
 import logger from './middlewares/logger.js'
@@ -13,6 +14,7 @@ const api = express()
 // Middlewares
 api.use(logger)
 api.use(bodyParser.json())
+api.use(cors())
 
 api.get('/', (req, res)=>{   
     res.json({message: "Bem-vindo a API"})
