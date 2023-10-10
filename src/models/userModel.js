@@ -23,8 +23,12 @@ const userSchema = z.object({
         required_error: "Senha é obrigatória.",
         invalid_type_error: "A senha deve ser do tipo string.",
     })
-    .min(6, { message: "A senha deve ter no mínimo 6 caracteres." })
-    .max(500, { message: "A senha deve ter no máximo 500 caracteres." }),
+      .min(6, { message: "A senha deve ter no mínimo 6 caracteres." })
+      .regex(new RegExp('.*[A-Z].*'), { message: "A senha deve ter no mínimo uma letra maiúscula." })
+      .regex(new RegExp('.*[a-z].*'), { message: "A senha deve ter no mínimo uma letra minúscula." })
+      .regex(new RegExp('.*[0-9].*'), { message: "A senha deve ter no mínimo um número." })
+      .regex(new RegExp('.*[`~<>?,./!@#$%^&*()\\-_+="\'|{}\\[\\];:\\\\].*'), { message: "A senha deve ter no mínimo um caractere especial." })
+      .max(500, { message: "A senha deve ter no máximo 500 caracteres." }),
     photo: z.string({
         required_error: "Foto é obrigatória.",
         invalid_type_error: "A foto deve ser do tipo string.",
