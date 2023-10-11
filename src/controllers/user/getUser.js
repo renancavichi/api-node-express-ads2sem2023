@@ -1,8 +1,17 @@
 import user from '../../models/userModel.js'
+import zodErrorParser from '../../helpers/zodErrorParser.js'
 
 const getUser = async (req, res)=>{   
     try {
-        const [rows, fields] = await user.get(req.body.id)
+        const userValidated = user.validadeIdUser(req.body)
+        if(userValidated.success === false){
+            const zodError = zodErrorParser(userValidated.error)
+            return res.status(400).json({
+                error: 'Dados inválidos',
+                fields: zodError
+            })
+        }
+        const [rows, fields] = await user.get(userValidated.data.id)
         if (rows.length === 0) {
             res.status(404).json({message: 'User not found'})
         } else {

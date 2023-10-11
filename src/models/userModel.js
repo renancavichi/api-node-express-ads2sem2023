@@ -36,14 +36,24 @@ const userSchema = z.object({
       .url({ message: "A foto deve ser uma url válida." })
 })
 
-const validateCreateUser = (user) =>{
+const validateCreateUser = (user) => {
     const partialUserSchema = userSchema.partial({id: true})
     return partialUserSchema.safeParse(user)
 }
 
-const validateUpdateUser = (user) =>{
+const validateUpdateUser = (user) => {
     const partialUserSchema = userSchema.partial({pass: true})
     return partialUserSchema.safeParse(user)
+}
+
+const validadeIdUser = (user) => {
+  const partialUserSchema = userSchema.partial({
+    name: true,
+    email: true,
+    pass: true,
+    photo: true
+  })
+  return partialUserSchema.safeParse(user)
 }
 
 const get = async (id) => {
@@ -68,4 +78,4 @@ const remove = async (id) => {
     return await db.query('DELETE FROM users WHERE id = ?;', [id])
 }
 
-export default {get, list, create, update, remove, validateCreateUser, validateUpdateUser}
+export default {get, list, create, update, remove, validateCreateUser, validateUpdateUser, validadeIdUser}
