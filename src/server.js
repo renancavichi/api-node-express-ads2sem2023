@@ -17,7 +17,7 @@ const api = express()
 api.use(logger)
 api.use(bodyParser.json())
 
-req.options('/whoiam', function (req, res) {
+api.options('/whoiam', (req, res) => {
     var origin = req.get('origin');
     console.log(origin)
     res.set('Access-Control-Allow-Origin', origin);
