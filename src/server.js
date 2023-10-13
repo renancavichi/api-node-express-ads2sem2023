@@ -23,8 +23,17 @@ api.get('/', (req, res)=>{
 api.use('/user', userRoute)
 api.use('/product', productRoute) 
 
+api.post('/worker-test', (req, res) => {
+    res.json(req.headers)
+})
+
 api.all('*', (req, res)=>{
     res.status(404).json({message: "Rota não encontrada!"})
+})
+
+api.post('/worker-test', (req, res)=>{
+    console.log(req.body)
+    res.json({message: "Rota de teste"})
 })
 
 api.listen(PORT, () => {
