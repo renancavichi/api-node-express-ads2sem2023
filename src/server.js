@@ -24,7 +24,7 @@ api.use('/user', userRoute)
 api.use('/product', productRoute) 
 
 api.post('/whoiam', (req, res) => {
-    res.json({ headers: req.headers, ip: req.ip, hostname: req.hostname, subdomains: req.subdomains })
+    res.json({ headers: req.headers, ip: req.ip, hostname: req.hostname, subdomains: req.subdomains, origin: req.origin, headerOrigin: req.headers.origin })
 })
 
 api.all('*', (req, res)=>{
