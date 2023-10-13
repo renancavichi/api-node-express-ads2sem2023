@@ -11,9 +11,19 @@ import productRoute from './router/productRoute.js'
 
 const api = express()
 
+
+
 // Middlewares
 api.use(logger)
 api.use(bodyParser.json())
+
+req.options('/whoiam', function (req, res) {
+    var origin = req.get('origin');
+    console.log(origin)
+    res.set('Access-Control-Allow-Origin', origin);
+    res.send('ok');
+});
+
 api.use(cors())
 
 api.get('/', (req, res)=>{   
@@ -24,7 +34,7 @@ api.use('/user', userRoute)
 api.use('/product', productRoute) 
 
 api.post('/whoiam', (req, res) => {
-    res.json({ headers: req.headers, ip: req.ip, hostname: req.hostname, subdomains: req.subdomains, origin: req.origin, headerOrigin: req.headers.origin })
+    res.json({ headers: req.headers, ip: req.ip, hostname: req.hostname, subdomains: req.subdomains, origin: 'origin- '+req.get('origin') + req.origin, headerOrigin: req.headers.origin })
 })
 
 api.all('*', (req, res)=>{
