@@ -23,8 +23,8 @@ api.get('/', (req, res)=>{
 api.use('/user', userRoute)
 api.use('/product', productRoute) 
 
-api.post('/worker-test', (req, res) => {
-    res.json(req.headers)
+api.post('/whoiam', (req, res) => {
+    res.json({ headers: req.headers, ip: req.ip, hostname: req.hostname, subdomains: req.subdomains })
 })
 
 api.all('*', (req, res)=>{
